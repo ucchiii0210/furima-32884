@@ -3,73 +3,67 @@
 
 ## users テーブル
 
-| Column        | Type       | Options                       |
-| ------------- | ---------- | ----------------------------- |
-| email         | string     | null: false                   |
-| password      | string     | null: false                   |
-| nickname      | string     | null: false                   |
-| firstname     | string     | null: false                   | 
-| lastname      | string     | null: false                   |
-| firstnamekana | string     | null: false                   |
-| lastnamekana  | string     | null: false                   |
-| birthday      | date       | null: false                   |
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| email              | string     | null: false,unique: true      |
+| encrypted_password | string     | null: false                   |
+| nickname           | string     | null: false                   |
+| first_name         | string     | null: false                   | 
+| last_name          | string     | null: false                   |
+| first_name_kana    | string     | null: false                   |
+| last_name_kana     | string     | null: false                   |
+| birthday           | date       | null: false                   |
 
 ### Association
 
 - has_many :items
-- has_one  :order
-- has_many :comments
+- has_many :purchase
+
+
+### purchase テーブル
+| Column     | Type       | Options                       |
+| ---------- | ---------- | ----------------------------- |
+| user_id    | references | null: false, foreign_key:true |
+| item_id    | references | null: false, foreign_key:true |
+
+### Association
+
+- belongs_to :item
+- belongs_to :user
+- has_one    :order
 
 
 ### orders テーブル
 
 | Column     | Type       | Options                       |
 | ---------- | ---------- | ----------------------------- |
-| postal     | integr     | null:false                    |
-| prefectuer | string     | null:false                    |
+| postal     | string     | null:false                    |
+| area_id    | integr     | null:false                    |
 | city       | string     | null:false                    |
 | appress    | string     | null:false                    |
 | property   | string     |                               |
 | tell       | string     | null:false                    |
-| user       | references | null: false, foreign_key:true |
+| order      | references | null: false, foreign_key:true |
 
 ### Association
-
-- belongs_to :user
-- has_many :items
+- belongs_to :purchase
 
 
 ## items テーブル
 
-| Column     | Type       | Options                       |
-| ---------- | ---------- | ----------------------------- |
-| itemename  | string     | null:false                    |
-| text       | text       | null:false                    |
-| category   | string     | null:false                    |
-| sipping    | string     | null:false                    |
-| status     | string     | null:false                    |
-| eria       | string     | null:false                    |
-| deys       | string     | null:false                    |
-| money      | integr     | null:false                    |
-| user       | references | null: false, foreign_key:true |
-| order      | references | null: false, foreign_key:true |
-
+| Column      | Type       | Options                       |
+| ----------- | ---------- | ----------------------------- |
+| product     | string     | null:false                    |
+| text        | text       | null:false                    |
+| category_id | integer    | null:false                    |
+| sipping_id  | integer    | null:false                    |
+| status_id   | integer    | null:false                    |
+| area_id     | integer    | null:false                    |
+| days_id     | integer    | null:false                    |
+| price       | integer    | null:false                    |
+| user        | references | null: false, foreign_key:true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :order
-- has_many   :comments
-
-## comments テーブル
-
-| Column    | Type       | Options                       |
-| --------- | ---------- | ----------------------------- |
-| text      | text       | null:false                    |
-| user      | references | null: false, foreign_key:true |
-| item      | references | null: false, foreign_key:true |
-
-### Association
-
-- belongs_to :item
-- belongs_to :user
+- has_one    :purchase
