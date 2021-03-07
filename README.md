@@ -38,9 +38,9 @@
 | Column     | Type       | Options                       |
 | ---------- | ---------- | ----------------------------- |
 | postal     | string     | null:false                    |
-| area_id    | integr     | null:false                    |
+| area_id    | integer    | null:false                    |
 | city       | string     | null:false                    |
-| appress    | string     | null:false                    |
+| address    | string     | null:false                    |
 | property   | string     |                               |
 | tell       | string     | null:false                    |
 | purchase   | references | null: false, foreign_key:true |
