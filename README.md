@@ -13,8 +13,6 @@
 | firstnamekana | string     | null: false                   |
 | lastnamekana  | string     | null: false                   |
 | birthday      | date       | null: false                   |
-| user          | references | null: false, foreign_key:true |
-| item          | references | null: false, foreign_key:true |
 
 ### Association
 
@@ -33,8 +31,8 @@
 | appress    | string     | null:false                    |
 | property   | string     | null:false                    |
 | tell       | string     | null:false                    |
-| card       | string     | null:false                    |
 | user       | references | null: false, foreign_key:true |
+| item       | references | null: false, foreign_key:true |
 
 ### Association
 
@@ -53,8 +51,8 @@
 | status     | string     | null:false                    |
 | eria       | string     | null:false                    |
 | deys       | string     | null:false                    |
+| sold_out   | boolean    | null:false                    |
 | user       | references | null: false, foreign_key:true |
-
 
 ### Association
 

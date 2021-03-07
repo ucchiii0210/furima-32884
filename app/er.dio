@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-03-07T06:21:53.070Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.54.1 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36" etag="NQevR__J4LROpLT4O9_v" version="14.2.4" type="embed">
+<mxfile host="65bd71144e" modified="2021-03-07T06:38:55.832Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.54.1 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36" etag="FgiNv82SVNbfNFVeidSp" version="14.2.4" type="embed">
     <diagram id="bRmcvwh7t8PvK6FbuVnr" name="ページ1">
-        <mxGraphModel dx="1259" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
+        <mxGraphModel dx="2007" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -39,7 +39,7 @@
                 </mxCell>
                 <object label="items テーブル" id="40">
                     <mxCell style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;direction=east;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
-                        <mxGeometry x="510" y="175" width="210" height="250" as="geometry">
+                        <mxGeometry x="510" y="175" width="210" height="282" as="geometry">
                             <mxRectangle x="560" y="40" width="120" height="26" as="alternateBounds"/>
                         </mxGeometry>
                     </mxCell>
@@ -65,8 +65,11 @@
                 <mxCell id="48" value="money (integer,not null)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#1D3557;labelBackgroundColor=none;" parent="40" vertex="1">
                     <mxGeometry y="190" width="210" height="28" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="days (string,not null)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#1D3557;" parent="40" vertex="1">
+                <mxCell id="83" value="days (string,not null)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#1D3557;" vertex="1" parent="40">
                     <mxGeometry y="218" width="210" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="sold_out (bloolean)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#1D3557;" parent="40" vertex="1">
+                    <mxGeometry y="250" width="210" height="32" as="geometry"/>
                 </mxCell>
                 <mxCell id="51" value="coments テーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
                     <mxGeometry x="210" y="70" width="210" height="56" as="geometry"/>
