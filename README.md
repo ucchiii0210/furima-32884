@@ -17,14 +17,14 @@
 ### Association
 
 - has_many :items
-- has_many :purchase
+- has_many :purchases
 
 
-### purchase テーブル
+### purchases テーブル
 | Column     | Type       | Options                       |
 | ---------- | ---------- | ----------------------------- |
-| user_id    | references | null: false, foreign_key:true |
-| item_id    | references | null: false, foreign_key:true |
+| user       | references | null: false, foreign_key:true |
+| item       | references | null: false, foreign_key:true |
 
 ### Association
 
@@ -43,7 +43,7 @@
 | appress    | string     | null:false                    |
 | property   | string     |                               |
 | tell       | string     | null:false                    |
-| order      | references | null: false, foreign_key:true |
+| purchase   | references | null: false, foreign_key:true |
 
 ### Association
 - belongs_to :purchase
@@ -59,7 +59,7 @@
 | sipping_id  | integer    | null:false                    |
 | status_id   | integer    | null:false                    |
 | area_id     | integer    | null:false                    |
-| days_id     | integer    | null:false                    |
+| day_id      | integer    | null:false                    |
 | price       | integer    | null:false                    |
 | user        | references | null: false, foreign_key:true |
 
