@@ -25,14 +25,13 @@
 
 | Column     | Type       | Options                       |
 | ---------- | ---------- | ----------------------------- |
-| postal     | string     | null:false                    |
+| postal     | integr     | null:false                    |
 | prefectuer | string     | null:false                    |
 | city       | string     | null:false                    |
 | appress    | string     | null:false                    |
-| property   | string     | null:false                    |
+| property   | string     |                               |
 | tell       | string     | null:false                    |
 | user       | references | null: false, foreign_key:true |
-| item       | references | null: false, foreign_key:true |
 
 ### Association
 
@@ -51,8 +50,10 @@
 | status     | string     | null:false                    |
 | eria       | string     | null:false                    |
 | deys       | string     | null:false                    |
-| sold_out   | boolean    | null:false                    |
+| money      | integr     | null:false                    |
 | user       | references | null: false, foreign_key:true |
+| order      | references | null: false, foreign_key:true |
+
 
 ### Association
 
