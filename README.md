@@ -19,7 +19,28 @@
 ### Association
 
 - has_many :items
+- has_one  :order
 - has_many :comments
+
+
+### orders テーブル
+
+| Column     | Type       | Options                       |
+| ---------- | ---------- | ----------------------------- |
+| postal     | string     | null:false                    |
+| prefectuer | string     | null:false                    |
+| city       | string     | null:false                    |
+| appress    | string     | null:false                    |
+| property   | string     | null:false                    |
+| tell       | string     | null:false                    |
+| card       | string     | null:false                    |
+| user       | references | null: false, foreign_key:true |
+
+### Association
+
+- belongs_to :user
+- has_many :items
+
 
 ## items テーブル
 
@@ -38,6 +59,7 @@
 ### Association
 
 - belongs_to :user
+- belongs_to :order
 - has_many   :comments
 
 ## comments テーブル
