@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-03-06T21:56:52.334Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.54.1 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36" version="14.2.4" etag="3YqB2-IZS80TrTO9gHIP" type="embed">
+<mxfile host="65bd71144e" modified="2021-03-07T04:39:14.520Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.54.1 Chrome/87.0.4280.141 Electron/11.3.0 Safari/537.36" version="14.2.4" etag="NFmTE1CNYl7x1oV0ndcP" type="embed">
     <diagram id="bRmcvwh7t8PvK6FbuVnr" name="ページ1">
-        <mxGraphModel dx="306" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
+        <mxGraphModel dx="72" dy="153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -44,7 +44,7 @@
                         </mxGeometry>
                     </mxCell>
                 </object>
-                <mxCell id="41" value="itemename (string,not null)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#1D3557;" vertex="1" parent="40">
+                <mxCell id="41" value="itemname (string,not null)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#1D3557;" vertex="1" parent="40">
                     <mxGeometry y="26" width="210" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" value="text (text,not null)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#1D3557;" vertex="1" parent="40">
