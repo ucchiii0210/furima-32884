@@ -117,23 +117,5 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include("Last name kana is invalid")
     end
-    # it 'では登録できない' do
-    #   # では登録できないテストコードを記述します
-    #   @user.   = 
-    #   @user.valid?
-    #   expect(@user.errors.full_messages).to include(" ")
-    # end
-    # it 'では登録できない' do
-    #   # では登録できないテストコードを記述します
-    #   @user.   = 
-    #   @user.valid?
-    #   expect(@user.errors.full_messages).to include(" ")
-    # end
-    # it 'では登録できない' do
-    #   # では登録できないテストコードを記述します
-    #   @user.   = 
-    #   @user.valid?
-    #   expect(@user.errors.full_messages).to include(" ")
-    # end
   end
 end
