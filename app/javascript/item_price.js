@@ -8,8 +8,8 @@ priceInput.addEventListener("input", () => {
    const profit = inputValue - fee
    const taxArea = document.getElementById("add-tax-price");
    const profitArea = document.getElementById("profit");
-   taxArea.innerHTML = fee;
-   profitArea.innerHTML = profit;
+   taxArea.innerHTML = Math.floor(fee);
+   profitArea.innerHTML = Math.floor(profit);
   })
 });
 
