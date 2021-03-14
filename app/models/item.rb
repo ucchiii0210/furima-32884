@@ -8,13 +8,19 @@ class Item < ApplicationRecord
     validates :image
     validates :product        
     validates :text 
-    with_options numericality: { only_integer: true } do
+    with_options numericality: { other_than: 1} do
       validates :category_id  
-      validates :sipping_id   
       validates :status_id  
+      validates :sipping_id   
       validates :area_id 
       validates :day_id  
-      validates :price 
     end
+    validates :price 
   end
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
+  belongs_to :status
+  belongs_to :sipping
+  belongs_to :area
+  belongs_to :day
 end
