@@ -15,7 +15,7 @@ class Item < ApplicationRecord
       validates :area_id 
       validates :day_id  
     end
-    validates :price ,:numericality => { :greater_than => 300 , :less_than_or_equal_to => 9999999} 
+    validates :price ,:numericality => {only_integer: true, :greater_than_or_equal_to => 300 , :less_than_or_equal_to => 9999999} 
   end
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
