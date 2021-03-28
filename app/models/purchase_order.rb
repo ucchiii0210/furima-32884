@@ -15,7 +15,7 @@ class PurchaseOrder
   belongs_to :area
 
   def save
-   purchase = Purchase.create(item_id: item_id ,user_id: item_id)
+   purchase_id = Purchase.create(item_id: item_id ,user_id: item_id)
    Order.create(postal: postal, area_id: area_id, city: city, address: address, propety: property, tell: tell, token: token, purchase_id: purchase_id)
   end
 end
