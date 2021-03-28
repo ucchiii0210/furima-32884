@@ -124,20 +124,12 @@
               <div class='item-img-content'>
                 <%= image_tag item.image, class: "item-img" %>
                   
-                  <% if @purchases[0] != nil %>
-                    <% @purchases.each do |purchase| %>
-                      <% num = 0 %>
-                      <% if item.id == purchase.item_id %>
-                        <%  num += 1 %>
-                      <% end %>
-                      <% if num == 1 %>
+                  <% if item.purchase.present? %>
                         <div class='sold-out'>
                           <span>Sold Out!!</span>
                         </div>
-                      <% end %>
-                    <% end %>
                   <% end %>
-
+                    
               </div>
               <div class='item-info'>
                 <h3 class='item-name'>
@@ -154,6 +146,7 @@
             <% end %>
           </li>
         <% end %>
+
       <% else %>
         <li class='list'>
           <%= link_to '#' do %>
@@ -173,6 +166,7 @@
           <% end %>
         </li>
       <% end %>
+
     </ul>
   </div>
 </div>

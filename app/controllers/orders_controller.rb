@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+  before_action :move_to_index_sold_out
 
   def index
     @item = Item.find(params[:item_id])
@@ -27,13 +28,21 @@ class OrdersController < ApplicationController
 
   def pay_item
     item = Item.find(params[:item_id])
-    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]  # 自身のPAY.JPテスト秘密鍵を記述しましょう
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY"]  
     Payjp::Charge.create(
-      amount: item.price,  # 商品の値段
-      card: params[:token],    # カードトークン
-      currency: 'jpy'                 # 通貨の種類（日本円）
+      amount: item.price,  
+      card: params[:token],  
+      currency: 'jpy'        
     )
   end
+
+  def move_to_index_sold_out
+    item = Item.find(params[:item_id])
+    if item.purchase.present? || item.user_id == current_user.id
+      redirect_to root_path
+    end
+  end
+
 end
 
 

@@ -28,7 +28,8 @@
       </p>
     </div>
 
-    <%= form_with url:item_orders_path ,id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <%= form_with(model: @purchase_order, url:item_orders_path, local: true) do |f| %>
+
     <div class='credit-card-form'>
       <h1 class='info-input-haedline'>
         クレジットカード情報入力
@@ -114,7 +115,7 @@
         <%= f.text_field :tell, class:"input-default", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%>
       </div>
     </div>
-    <%# /配送先の入力 %>
+
     <div class='buy-btn'>
       <%= f.submit "購入" ,class:"buy-red-btn" %>
     </div>
