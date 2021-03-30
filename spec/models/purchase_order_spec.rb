@@ -6,9 +6,14 @@ RSpec.describe PurchaseOrder, type: :model do
       @order = FactoryBot.build(:purchase_order)
     end
     context '購入ができる時' do
-      it 'すべての値が正しく入力されていれば保存できること' do
+      it 'すべての値が正しく入力されていれば購入できること' do
         expect(@order).to be_valid
       end
+      it 'propertyが空でも購入できること' do
+        @order.property = '' 
+        expect(@order).to be_valid
+      end
+
     end
 
     context '購入ができない時' do
@@ -17,7 +22,7 @@ RSpec.describe PurchaseOrder, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("Postal can't be blank")
       end
-      it 'area_idが空ではvできない' do
+      it 'area_idが空では購入できない' do
         @order.area_id = ''  
         @order.valid?
         expect(@order.errors.full_messages).to include("Area can't be blank")
@@ -27,7 +32,7 @@ RSpec.describe PurchaseOrder, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("City can't be blank")
       end
-      it 'addressが空ではvできない' do
+      it 'addressが空では購入できない' do
         @order.address = ''  
         @order.valid?
         expect(@order.errors.full_messages).to include("Address can't be blank")
@@ -51,6 +56,21 @@ RSpec.describe PurchaseOrder, type: :model do
         @order.tell = '1111111'  
         @order.valid?
         expect(@order.errors.full_messages).to include("Tell is invalid")
+      end
+      it 'tellが12桁以上では購入できない' do
+        @order.tell = '123456789012'  
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Tell is invalid")
+      end
+      it 'tellが英数混合では購入できない' do
+        @order.tell = '1a2b3c4d5e6'  
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Tell is invalid")
+      end
+      it 'area_idが--購入できない' do
+        @order.area_id = 1  
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Area must be other than 1")
       end
     end
   end

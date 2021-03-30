@@ -9,6 +9,8 @@ class PurchaseOrder
     validates :city 
     validates :address 
     validates :tell  , format: { with: /\A\d{10,11}\z/ }
+    validates :item_id
+    validates :user_id
   end
   validate :property  
   
