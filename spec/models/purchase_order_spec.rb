@@ -3,8 +3,12 @@ require 'rails_helper'
 RSpec.describe PurchaseOrder, type: :model do
   describe '購入機能' do
     before do
-      @order = FactoryBot.build(:purchase_order)
+      @item = FactoryBot.create(:item)
+      @user = FactoryBot.create(:user)
+      @order = FactoryBot.build(:purchase_order,item_id: @item.id,user_id: @user.id)
+      sleep(1) #処理速度でエラーになるときがあるので
     end
+
     context '購入ができる時' do
       it 'すべての値が正しく入力されていれば購入できること' do
         expect(@order).to be_valid
@@ -13,7 +17,6 @@ RSpec.describe PurchaseOrder, type: :model do
         @order.property = '' 
         expect(@order).to be_valid
       end
-
     end
 
     context '購入ができない時' do
