@@ -23,8 +23,8 @@
 ### purchases テーブル
 | Column     | Type       | Options                       |
 | ---------- | ---------- | ----------------------------- |
-| user       | references | null: false, foreign_key:true |
-| item       | references | null: false, foreign_key:true |
+| user       | references | null:false, foreign_key: true |
+| item       | references | null:false, foreign_key: true |
 
 ### Association
 
@@ -43,7 +43,7 @@
 | address    | string     | null:false                    |
 | property   | string     |                               |
 | tell       | string     | null:false                    |
-| purchase   | references | null: false, foreign_key:true |
+| purchase   | references | null:false, foreign_key: true |
 
 ### Association
 - belongs_to :purchase
@@ -61,7 +61,7 @@
 | area_id     | integer    | null:false                    |
 | day_id      | integer    | null:false                    |
 | price       | integer    | null:false                    |
-| user        | references | null: false, foreign_key:true |
+| user        | references | null:false, foreign_key: true |
 
 ### Association
 
