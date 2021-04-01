@@ -50,6 +50,16 @@ RSpec.describe PurchaseOrder, type: :model do
         @order.valid?
         expect(@order.errors.full_messages).to include("Token can't be blank")
       end
+      it 'user_idが空では購入できない' do
+        @order.user_id = ''  
+        @order.valid?
+        expect(@order.errors.full_messages).to include("User can't be blank")
+      end
+      it 'item_idが空では購入できない' do
+        @order.item_id = ''  
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Item can't be blank")
+      end
       it 'postalがハイフン(-)無しでは購入できない' do
         @order.postal = '1111111'  
         @order.valid?
