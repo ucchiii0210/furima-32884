@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_092318) do
+ActiveRecord::Schema.define(version: 2021_04_02_124703) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -34,14 +34,14 @@ ActiveRecord::Schema.define(version: 2021_03_19_092318) do
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "product"
-    t.text "text"
-    t.integer "category_id"
-    t.integer "status_id"
-    t.integer "sipping_id"
-    t.integer "area_id"
-    t.integer "day_id"
-    t.integer "price"
+    t.string "product", null: false
+    t.text "text", null: false
+    t.integer "category_id", null: false
+    t.integer "status_id", null: false
+    t.integer "sipping_id", null: false
+    t.integer "area_id", null: false
+    t.integer "day_id", null: false
+    t.integer "price", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -49,12 +49,12 @@ ActiveRecord::Schema.define(version: 2021_03_19_092318) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "postal"
-    t.integer "area_id"
-    t.string "city"
-    t.string "address"
+    t.string "postal", null: false
+    t.integer "area_id", null: false
+    t.string "city", null: false
+    t.string "address", null: false
     t.string "property"
-    t.string "tell"
+    t.string "tell", null: false
     t.bigint "purchase_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -73,12 +73,12 @@ ActiveRecord::Schema.define(version: 2021_03_19_092318) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "nickname"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "first_name_kana"
-    t.string "last_name_kana"
-    t.date "birthday"
+    t.string "nickname", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "first_name_kana", null: false
+    t.string "last_name_kana", null: false
+    t.date "birthday", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
