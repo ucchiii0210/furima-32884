@@ -1,5 +1,9 @@
 /* border-bottom: 1px solid #eee; */
 
+.preview{
+  max-width: 33vw;
+  max-height: 33vh;
+}
 
 .items-sell-contents {
   background-color: #f5f5f5;
