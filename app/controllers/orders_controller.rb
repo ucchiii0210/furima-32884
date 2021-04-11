@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
   before_action :move_to_index_sold_out
 
   def index
-    
     @purchase_order = PurchaseOrder.new
   end
 
@@ -43,7 +42,6 @@ class OrdersController < ApplicationController
       redirect_to root_path
     end
   end
-
 
 end
 
