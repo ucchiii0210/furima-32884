@@ -64,3 +64,4 @@ gem 'active_hash'
 gem 'pry-rails'
 gem 'payjp'
 gem "gretel"
+gem 'rails-i18n'
